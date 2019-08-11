@@ -8,7 +8,7 @@
   <meta name="msapplication-navbutton-color" content="#5e2ced">
   <meta name="description" content="Веб-студия F&S - разработка и сопровождение сайтов в Краснодаре и по всей территории РФ" />
   <meta name="keywords" content="увеличить прибыль, раскрутить бизнес, бизнес в интернете, создать сайт, веб студия, сопровождение сайта, разработка сайта, сайт, интернет магазин, лэндинг, landing page, продвинуть сайт, продвинуть в топ, сайт для компании, сайт визитка, настроить рекламу, заказать рекламу" />
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="robots" content="index, follow" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>Веб-студия F&S - увеличим прибыль Вашего бизнеса на 40% с новым подходом к разработке сайтов</title>
@@ -22,6 +22,12 @@
   <link rel="preload" href="css/resize.css" as="style" />
   <link rel="prefetch" href="css/pages.css" as="style" />
   <link rel="stylesheet" type="text/css" href="css/preloader.css" />
+
+  <script>
+      navigator.serviceWorker && navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          console.log('Excellent, registered with scope: ', registration.scope);
+      });
+  </script>
 
 <!--
 Oh, why are you here -in my head-?
