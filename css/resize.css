@@ -1,0 +1,162 @@
+/* 1920px */
+
+@media screen and (min-width:1900px) {
+  .container__top {
+    padding:1% 20%;
+  }
+
+  .container__preview-block,
+  .container__services,
+  .container__problems,
+  .container__prices,
+  .container__work-process,
+  .container__form,
+  .container__portfolio {
+    padding:5% 20%;
+  }
+
+  .container__page-preview {
+    padding:10% 20%;
+  }
+
+  .footer__inner {
+    padding:1% 15%;
+  }
+
+  .caption__preview {
+    padding-right:20%;
+  }
+
+  .text__preview {
+    padding-right:20%;
+  }
+
+  .caption__services::before,
+  .caption__steps::before,
+  .caption__prices::before,
+  .portfolio__caption::before,
+  .caption__contact::before {
+    top:60px;
+  }
+}
+
+/* 1920px */
+
+/* Mobile */
+
+@media screen and (max-width:1000px) {
+  .container_fixed {
+    display:none;
+  }
+
+  .container__top {
+    flex-flow:row-reverse nowrap;
+    padding:5% 10%;
+  }
+
+  .logo {
+    flex-grow:5;
+  }
+
+  .menu {
+    display:none;
+  }
+
+  .container__preview-block {
+    flex-flow:column-reverse;
+    padding:5%;
+  }
+
+  .text__preview {
+    padding-right:0%;
+  }
+
+  .preview-block__right {
+    text-align:left;
+  }
+
+  .container__services {
+    padding:10%;
+    margin-top:10px;
+  }
+
+  .services {
+    flex-flow:column;
+    margin:0;
+  }
+
+  .service-block {
+    width:auto;
+  }
+
+  .service-block__margin {
+    margin:40px 0 0 0;
+  }
+
+  .container__problems {
+    flex-flow:column;
+  }
+
+  .problems__text {
+    padding:0;
+  }
+
+  .container__tabs {
+    overflow:auto;
+    width:auto;
+    justify-content:flex-start;
+  }
+
+  .tab__text {
+    flex-flow:column;
+  }
+
+  .tab__text-block {
+    flex-grow:10;
+    padding-left:0%;
+    width:100%;
+  }
+
+  .prices {
+    flex-flow:column;
+  }
+
+  .portfolio__images {
+    flex-flow:column;
+  }
+
+  .portfolio__image {
+    margin-top:40px;
+    margin-left:0;
+  }
+
+  .portfolio__images:nth-child(2) {
+    display:none;
+  }
+
+  .contact-block__inner {
+    flex-flow:column-reverse;
+  }
+
+  .contact__form {
+    padding:0;
+  }
+
+  .footer__text {
+    text-align:center;
+  }
+
+  .caption__services::before,
+  .caption__steps::before,
+  .caption__prices::before,
+  .portfolio__caption::before,
+  .caption__contact::before {
+    top:0%;
+  }
+
+  .go-top {
+    display:none !important;
+  }
+}
+
+/* Mobile */
