@@ -156,18 +156,7 @@ $(function() {
         var orderFrom = $("input[name='order-from']").val();
         var orderData = [name, phone, email, userText, orderFrom];
 
-        $.post("http://fsmalcompany/engine/modules/orderform/get.php",
-            { orderData: orderData },
-            function(data) {
-                data = JSON.parse(data);
-
-                alert(data['text']);
-
-                if (data['reload']) {
-                    window.location.href="";
-                }
-            }
-        );
+        alert("Thank you!");
     });
 
 });
@@ -178,13 +167,9 @@ $(function() {
 
 $(function() {
     var dateFormat = $("#js-date").attr('data-dateFormat');
-
-    $.post("http://fsmalcompany/engine/modules/scripts/datescript.php",
-        { format: dateFormat },
-        function(data) {
-            $("#js-date").text(data);
-        }
-    );
+  
+    $("#js-date").text("2019");
+  
 });
 
 /* END--GetDate */
