@@ -6,9 +6,18 @@
   <meta name="apple-mobile-web-app-title" content="Web-studio F&S">
   <meta name="theme-color" content="#5e2ced">
   <meta name="msapplication-navbutton-color" content="#5e2ced">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Веб-студия F&S">
+  <meta property="og:title" content="Веб-студия F&S - разработка сайтов">
+  <meta property="og:description" content="Веб-студия F&S - разработка и сопровождение сайтов в Краснодаре и по всей территории РФ">
+  <meta property="og:url" content="http://fsmalcompany/">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="http://fsmalcompany/images/og-image.jpg">
+  <meta property="og:image:width" content="968">
+  <meta property="og:image:height" content="504">
   <meta name="description" content="Веб-студия F&S - разработка и сопровождение сайтов в Краснодаре и по всей территории РФ" />
   <meta name="keywords" content="увеличить прибыль, раскрутить бизнес, бизнес в интернете, создать сайт, веб студия, сопровождение сайта, разработка сайта, сайт, интернет магазин, лэндинг, landing page, продвинуть сайт, продвинуть в топ, сайт для компании, сайт визитка, настроить рекламу, заказать рекламу" />
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="robots" content="index, follow" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>Веб-студия F&S - увеличим прибыль Вашего бизнеса на 40% с новым подходом к разработке сайтов</title>
@@ -18,8 +27,10 @@
   <link rel="apple-touch-icon" type="image/png" sizes="96x96" href="images/logo96x96.png">
   <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="images/logo192x192.png">
   <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="images/logo.png">
+  <link rel="preload" href="css/preloader.css" as="style" />
   <link rel="preload" href="css/style.css" as="style" />
   <link rel="preload" href="css/resize.css" as="style" />
+  <link rel="preload" href="css/animate.min.css" as="style" />
   <link rel="prefetch" href="css/pages.css" as="style" />
   <link rel="stylesheet" type="text/css" href="css/preloader.css" />
 
@@ -54,46 +65,48 @@ Go away, you won't find anything unusual here!
           <ul class="menu inline-block">
             <li><a href="#" class="link menu-link menu-link_active">Главная</a></li>
             <li class="menu__dropdown">
-              <a href="#" class="link menu-link">Услуги</a>
+              <a href="javascript:void(0);" class="link menu-link">Услуги</a>
               <ul class="menu submenu zIndex-9">
                 <li><a href="http://fsmalcompany/pages/services/sites/" class="link menu-link">Сайты</a></li>
                 <li><a href="http://fsmalcompany/pages/services/other/" class="link menu-link">Продвижение и сопровождение</a></li>
                 <li><a href="http://fsmalcompany/pages/services/other/" class="link menu-link">Редизайн</a></li>
               </ul>
             </li>
-            <li><a href="#" class="link menu-link">О нас</a></li>
             <li><a href="#" class="link menu-link">Портфолио</a></li>
             <li><a href="#" class="link menu-link">Блог</a></li>
-            <li><a href="#" class="link menu-link">Контакты</a></li>
+            <li><a href="http://fsmalcompany/pages/contacts/" class="link menu-link">Контакты</a></li>
           </ul>
         </div>
       </div>
       <div class="container zIndex-1">
         <div class="container__preview-block">
           <div class="container preview-block__left">
-            <h1 class="caption caption__preview caption_h1">Как увеличить прибыль почти в два раза за пару недель?</h1>
+            <h1 class="caption caption__preview caption_h1">Как увеличить прибыль почти в два раза всего за пару недель?</h1>
             <p class="text text__preview">
-              С нашим новым подходом к разработке интернет-решений Ваш бизнес уже через две недели ощутит прирост количества клиентов минимум на 40%. Вести бизнес в интернете стало проще. Попробуйте и Вы!
+              С нашим новым подходом к разработке сайтов Ваш бизнес уже через две недели ощутит прирост количества клиентов минимум на 40%. Вести бизнес в интернете стало проще. Попробуйте и Вы!
             </p>
-            <a href="#" class="button">Заказать сайт</a>
+            <a href="#order" class="button">Заказать сайт</a>
           </div>
-          <div class="container preview-block__right">
-            <picture>
+          <div class="container preview-block__right" id="parallax">
+            <img src="images/rocket.png" class="image__rocket" id="rocket" />
+            <img src="images/cloudes.png" class="image__cloudes" id="cloudes" />
+            <img src="images/notebook.png" class="image__notebook" id="notebook" />
+            <!--<picture>
               <source srcset="images/preview-image.webp" type="image/webp">
               <source srcset="images/preview-image.png" type="image/png">
               <img src="images/preview-image.png" class="image image__preview" alt="Разработка сайта в веб-студии F&S" />
-            </picture>
+            </picture>-->
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <div class="container">
+  <div class="container wow fadeInUp">
     <div class="container__services">
       <h1 class="caption caption__services caption_h1">Разрабатываем качественные сайты</h1>
       <p class="text alignCenter">
-        Наша компания специализируется на разработке качественных сайтов с индивидуальным дизайном. Мы используем только современные технологии и совершенно новый подход к разработке сайтов. Заказывайте сайт у нас!
+        Наша компания специализируется на разработке качественных типовых интернет-решений для различных сфер бизнеса. Мы используем только современные технологии и совершенно новый подход к разработке сайтов. Заказывайте сайт в нашей веб-студии!
       </p>
       <div class="services">
         <div class="service-block service-block__margin">
@@ -105,7 +118,7 @@ Go away, you won't find anything unusual here!
             </div>
             <h1 class="caption caption_h1">Индивидуальный подход</h1>
             <p class="text">
-              Принцип работы нашей веб-студии - индивидуальный подход к каждому сайту. Мы учтем все тонкости Вашего бизнеса.
+              Принцип работы нашей веб-студии - индивидуальный подход к каждому клиенту. Мы учтем все тонкости Вашего бизнеса.
             </p>
           </div>
         </div>
@@ -138,7 +151,7 @@ Go away, you won't find anything unusual here!
       </div>
       <div class="container">
         <div class="service__button">
-          <a href="#" class="button button_lightBlue">Узнать больше</a>
+          <a href="http://fsmalcompany/pages/contacts/" class="button button_lightBlue">Узнать больше</a>
         </div>
       </div>
     </div>
@@ -146,19 +159,23 @@ Go away, you won't find anything unusual here!
 
   <div class="container container_lightBlue">
     <div class="container__problems">
-      <div class="container problems__image">
-        <img src="images/problem-image.png" class="image image__problems" alt="Решим проблему поиска клиентов в интернете" />
+      <div class="container problems__image wow slideInLeft">
+        <picture>
+          <source srcset="images/problem-image.webp" type="image/webp">
+          <source srcset="images/problem-image.png" type="image/png">
+          <img src="images/problem-image.png" class="image image__problems" alt="Решим проблему поиска клиентов в интернете" />
+        </picture>
       </div>
-      <div class="container problems__text">
-        <h1 class="caption caption_h1">Решим любую проблему, связанную с поиском клиентов в интернете</h1>
+      <div class="container problems__text wow slideInRight">
+        <h1 class="caption caption_h1">Наша цель - решить задачу клиента</h1>
         <p class="text">
-          Цель выхода бизнеса в интернет - охватить как можно больше аудитории и получить дополнительных клиентов. Заказывая разработку сайта в нашей веб-студии, Вы получите не только красивый внешне продукт, но и способный работать по назначению.
+          Цель выхода бизнеса в интернет - охватить как можно больше аудитории и получить дополнительных клиентов. Заказывая разработку сайта в нашей веб-студии, Вы получаете мощный и надежный инструмент для продвижения компании в Интернете.
           <br>
           <ul class="problems__list">
-            <li class="problems__li"><span class="text problems__span">Проблема 1</span></li>
-            <li class="problems__li"><span class="text problems__span">Проблема 2</span></li>
-            <li class="problems__li"><span class="text problems__span">Проблема 3</span></li>
-            <li class="problems__li"><span class="text problems__span">Проблема 4</span></li>
+            <li class="problems__li"><span class="text problems__span">Привлечение дополнительных клиентов</span></li>
+            <li class="problems__li"><span class="text problems__span">Увеличение прибыльности бизнеса</span></li>
+            <li class="problems__li"><span class="text problems__span">Укрепление имиджа компании</span></li>
+            <li class="problems__li"><span class="text problems__span">Автоматизация работы</span></li>
           </ul>
         </p>
       </div>
@@ -166,7 +183,7 @@ Go away, you won't find anything unusual here!
   </div>
 
   <div class="container container_promo">
-    <div class="promo-block">
+    <div class="promo-block wow fadeIn">
       <h1 class="caption caption_h1 caption__promo alignCenter">Решите проблему с поиском клиентов прямо сейчас!</h1>
       <h3 class="caption caption_h3 text__promo alignCenter">Закажите разработку сайта в веб-студии F&S</h3>
       <div class="promo__button alignCenter">
@@ -176,7 +193,7 @@ Go away, you won't find anything unusual here!
   </div>
 
   <div class="container alignCenter">
-    <div class="container__work-process">
+    <div class="container__work-process wow slideInUp">
       <h1 class="caption caption_h1 caption__steps">Как мы работаем?</h1>
       <div class="container">
         <div class="container__tabs alignCenter">
@@ -228,7 +245,7 @@ Go away, you won't find anything unusual here!
             <img src="images/preview-image.png" class="image tab__image" />
           </div>
           <div class="tab__text-block">
-            <h1 class="caption caption_h1 caption__tab">Препроектная подготовка</h1>
+            <h1 class="caption caption_h1 caption__tab">Предпроектная подготовка</h1>
             <p class="text">
               Ознакомление с проектом, уточнение целей и задач.<br>
               Определение и анализ целевой аудитории. Разработка и утверждение окончательного ТЗ.<br>
@@ -267,7 +284,7 @@ Go away, you won't find anything unusual here!
             <h1 class="caption caption_h1 caption__tab">Верстка и программирование</h1>
             <p class="text">
               Верстка страниц сайта.<br>
-              Интеграция с CMS, доработка функционала настройка сервера.<br>
+              Интеграция с CMS, доработка функционала, настройка сервера.<br>
               <ul class="problems__list">
                 <li class="problems__li"><span class="text problems__span">Сверстаем сайт по утвержденному шаблону</span></li>
                 <li class="problems__li"><span class="text problems__span">Напишем необходимые дополнительные модули</span></li>
@@ -319,9 +336,9 @@ Go away, you won't find anything unusual here!
 
   <div class="container alignCenter">
     <div class="container__prices">
-      <h1 class="caption caption_h1 caption__prices alignCenter">Стоимость разработки сайтов</h1>
+      <h1 class="caption caption_h1 caption__prices alignCenter wow fadeIn">Стоимость разработки сайтов</h1>
       <div class="prices">
-        <div class="service-block service-block__margin">
+        <div class="service-block service-block__margin wow fadeInLeft">
           <div class="service__inner alignCenter">
             <div class="services__image">
               <div class="services__image-inner">
@@ -343,21 +360,21 @@ Go away, you won't find anything unusual here!
             </ul>
             <div class="container alignCenter">
               <div class="cost__button">
-                <a href="#" class="button cost-block__button">Заказать</a>
+                <a href="#order" class="button cost-block__button">Заказать</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="service-block service-block__margin">
+        <div class="service-block service-block__margin wow fadeIn">
           <div class="service__inner alignCenter">
             <div class="services__image">
               <div class="services__image-inner">
                 <i class="fa fa-clipboard icon"></i>
               </div>
             </div>
-            <h1 class="caption caption_h1">Сайт-визитка</h1>
+            <h1 class="caption caption_h1">Сайт компании</h1>
             <p class="text cost">
-              От 3 200 рублей
+              От 8 250 рублей
             </p>
             <ul class="list">
               <li class="list-elem capability__li">Дизайн на выбор</li>
@@ -370,12 +387,12 @@ Go away, you won't find anything unusual here!
             </ul>
             <div class="container alignCenter">
               <div class="cost__button">
-                <a href="#" class="button cost-block__button">Заказать</a>
+                <a href="#order" class="button cost-block__button">Заказать</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="service-block service-block__margin">
+        <div class="service-block service-block__margin wow fadeInRight">
           <div class="service__inner alignCenter">
             <div class="services__image">
               <div class="services__image-inner">
@@ -384,7 +401,7 @@ Go away, you won't find anything unusual here!
             </div>
             <h1 class="caption caption_h1">Интернет-магазин</h1>
             <p class="text cost">
-              От 8 650 рублей
+              От 10 650 рублей
             </p>
             <ul class="list list__cost">
               <li class="list-elem capability__li">Дизайн на выбор</li>
@@ -397,7 +414,7 @@ Go away, you won't find anything unusual here!
             </ul>
             <div class="container alignCenter">
               <div class="cost__button">
-                <a href="#" class="button cost-block__button">Заказать</a>
+                <a href="#order" class="button cost-block__button">Заказать</a>
               </div>
             </div>
           </div>
@@ -407,7 +424,7 @@ Go away, you won't find anything unusual here!
   </div>
 
   <div class="container alignCenter">
-    <div class="container__portfolio">
+    <div class="container__portfolio wow fadeIn">
       <h1 class="caption caption_h1 portfolio__caption">Портфолио</h1>
       <div class="container">
         <div class="portfolio__images">
@@ -511,15 +528,15 @@ Go away, you won't find anything unusual here!
     </div>
   </div>
 
-  <div class="container">
+  <div class="container" id="js-contactForm">
     <div class="container__form">
-      <h1 class="caption caption_h1 caption__contact alignCenter">Закажите разрабоку сайта прямо сейчас!</h1>
-      <p class="text alignCenter">
-        Хотите создать сайт? Обращайтесь в нашу веб-студию и мы с радостью разработаем для Вас сайт с индивидуальным дизайном. Вы так же можете задать нам интересующие Вас вопросы, воспользовавшись контактной формой ниже.
+      <h1 class="caption caption_h1 caption__contact alignCenter wow fadeIn">Закажите разрабоку сайта прямо сейчас!</h1>
+      <p class="text alignCenter wow fadeIn">
+        Хотите создать сайт? Обращайтесь в нашу веб-студию и мы с радостью разработаем для Вас сайт. Вы так же можете задать нам интересующие Вас вопросы, воспользовавшись контактной формой ниже.
       </p>
       <div class="container">
         <div class="contact-block__inner">
-          <div class="contact__form">
+          <div class="contact__form wow slideInLeft">
             <form class="form form__inner" id="js-form" method="post">
               <div class="container input__NamePhone">
                 <input type="text" pattern="[а-яА-Яa-zA-Z]+" class="input contact__input contact__input_name family-Condensed" name="name" placeholder="Ваше имя:" maxlength="20" required>
@@ -538,7 +555,7 @@ Go away, you won't find anything unusual here!
               <button type="submit" class="button contact__button button_form">Оставить заявку</button>
             </form>
           </div>
-          <div class="contact__contacts">
+          <div class="contact__contacts wow slideInRight">
             <div class="container contacts__phone">
               <p class="text noMargin">
                 <span class="fa fa-phone contacts__icon"></span><span class="phone">Телефон:</span><br>
@@ -566,7 +583,7 @@ Go away, you won't find anything unusual here!
 
   <footer class="container">
     <div class="footer__inner">
-      <p class="text footer__text family-Condensed">
+      <p class="text footer__text family-Condensed wow fadeIn">
         &copy; <span id="js-date" data-dateFormat='0'></span>. ООО "ФЭНДСМАЛКОМПАНИ ЛТД"
       </p>
     </div>
@@ -576,13 +593,19 @@ Go away, you won't find anything unusual here!
     <span class="fa fa-arrow-circle-up arrowToTop"></span>
   </div>
 
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" href="css/resize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/resize.css" />
+  <link rel="stylesheet" href="css/animate.min.css" />
   <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
-  <script type="text/javascript" src="https://fsmalcompany.ru/js/jquery-1.12.2.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://fsmalcompany.ru/js/jquery-1.12.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/parallax.js"></script>
+  <script>
+      new WOW().init();
+  </script>
   <!--Use fa fa-* class-->
 </body>
 </html>
 
-<!--v0.2.1-dev-withoutAri-->
+<!--v0.2.3-dev-withoutAri-->
