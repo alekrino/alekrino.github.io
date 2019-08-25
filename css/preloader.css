@@ -147,7 +147,7 @@ body {
   display:flex;
   flex-flow:row nowrap;
   transition:1s;
-  display:none;
+  
 }
 
 .preloader_active {
