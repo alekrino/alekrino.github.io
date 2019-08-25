@@ -1,3 +1,141 @@
+/* Root Styles */
+
+:root {
+  --black:#000000;
+  --light-gray:#777777;
+  --lighter-gray:#f3f3f3;
+  --main-gray:#e7e7e7;
+  --white:#ffffff;
+  --light-blue:#edf5ff;
+  --main-blue:#5e2ced;
+  --main-gradient:linear-gradient(-45deg, var(--main-blue), #a485fd);
+}
+
+body {
+  position:relative;
+  margin:0;
+  font-family:'EB Garamond', serif;
+}
+
+.container {
+  position:relative;
+  margin:0;
+  width:100%;
+}
+
+.container_fixed {
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  background:var(--white);
+  box-shadow:1px 1px 5px var(--light-gray);
+}
+
+.link {
+  text-decoration:none;
+  color:var(--black);
+  transition:0.5s;
+}
+
+.link_blue {
+  text-decoration:underline;
+  color:var(--main-blue);
+}
+
+.link_blue:hover {
+  text-decoration:none;
+  color:var(--black);
+}
+
+/* Root Styles */
+
+/* z-index */
+
+.zIndex-1 {
+  z-index:1;
+}
+
+.zIndex-9 {
+  z-index:9;
+}
+
+/* z-index */
+
+/* Display */
+
+.inline-block {
+  display:inline-block;
+}
+
+.displayBlock {
+  display:flex !important;
+}
+
+/* Display */
+
+/* Position */
+
+.noMargin {
+  margin:0;
+}
+
+/* Position */
+
+/* Caption */
+
+.caption {
+  margin:0;
+  padding:0;
+}
+
+.caption_h3 {
+  font-weight:normal;
+  font-size:0.9em;
+}
+
+.caption_h1 {
+  font-weight:bold;
+  font-size:1.8em;
+}
+
+/* Caption */
+
+/* Text align */
+
+.alignCenter {
+  text-align:center;
+}
+
+.alignJustify {
+  text-align:justify;
+}
+
+/* Text align */
+
+/* Image */
+
+.image {
+  width:50%;
+  transition:1s;
+}
+
+.image:hover {
+  margin-top:-10px;
+}
+
+/* Image */
+
+/* List */
+
+.list {
+  padding:0;
+  margin:0;
+  list-style-type:none;
+}
+
+/* List */
+
 /* Preloader */
 
 .preloader {
