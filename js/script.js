@@ -151,7 +151,7 @@ $(function() {
     var footerHeight = $("footer").height();
 
     $(window).scroll(function() {
-        if ($(this).scrollTop() < (screenHeight - footerHeight) - 500 && $(this).scrollTop() > headerHeight) {
+        if ($(this).scrollTop() < ((screenHeight - footerHeight) - 1500) && $(this).scrollTop() > headerHeight) {
             $(".mobile-menu").css("position", "fixed");
         } else {
             $(".mobile-menu").css("position", "relative");
