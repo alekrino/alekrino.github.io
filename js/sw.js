@@ -1,6 +1,6 @@
 /* It is a Service Worker */
 
-self.addEventListener('install', function(e) {
+/* self.addEventListener('install', function(e) {
     e.waitUntil(
         caches.open('the-magic-cache').then(function(cache) {
             return cache.addAll([
@@ -24,4 +24,4 @@ self.addEventListener('fetch', function(event) {
           return response || fetch(event.request);
         });
     );
-});
+}); */
