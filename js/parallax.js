@@ -1,7 +1,19 @@
-document.body.addEventListener("mousemove", function(e) {
-    startParallax(e, rocket, -1, 25);
-    startParallax(e, cloudes, 1, 30);
-    startParallax(e, notebook, -1, 150);
+$(function() {
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $(".preview-block__right").css("display", "none");
+        $(".preview-block__right-mobile").css("display", "flex");
+        console.log(navigator.userAgent);
+    } else {
+
+        document.body.addEventListener("mousemove", function(e) {
+            startParallax(e, rocket, -1, 25);
+            startParallax(e, cloudes, 1, 30);
+            startParallax(e, notebook, -1, 150);
+        });
+
+    }
+
 });
 
 function startParallax(e, element, dir, speed) {

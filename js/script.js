@@ -142,6 +142,26 @@ $(function() {
 
 /* END--ArrowToTop */
 
+/* Mobile menu */
+
+$(function() {
+
+    var screenHeight = $("body").height();
+    var headerHeight = $("header").height();
+    var footerHeight = $("footer").height();
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() < (screenHeight - footerHeight) && $(this).scrollTop() > headerHeight) {
+            $(".mobile-menu").css("position", "fixed");
+        } else {
+            $(".mobile-menu").css("position", "relative");
+        }
+    });
+
+});
+
+/* Mobile menu */
+
 /* Page scrolling */
 
 $(function() {
@@ -152,39 +172,6 @@ $(function() {
 });
 
 /* END--Page scrolling */
-
-/* Mobile menu */
-
-$(function() {
-
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        $(".logo").after(function(index) {
-            let content = '<div class="mobile-menu inline-block">' +
-                          '<input type="checkbox" id="checkbox2" class="checkbox2 visuallyHidden">' +
-                          '<label for="checkbox2">' +
-                          '<div class="hamburger hamburger2">' +
-                          '<span class="bar bar1"></span>' +
-                          '<span class="bar bar2"></span>' +
-                          '<span class="bar bar3"></span>' +
-                          '<span class="bar bar4"></span>' +
-                          '</div>' +
-                          '</label>' +
-                          '</div>';
-
-            return content;
-        });
-
-    } else {
-        return false;
-    }
-
-    $(".mobile-menu").on('click', function() {
-        $(".menu").css("display", "flex");
-    });
-
-})
-
-/* END--Mobile menu */
 
 /* Form-submit */
 
@@ -200,7 +187,18 @@ $(function() {
         var orderFrom = $("input[name='order-from']").val();
         var orderData = [name, phone, email, userText, orderFrom];
 
-        alert("Thank you!");
+        $.post("engine/modules/orderform/get.php",
+            { orderData: orderData },
+            function(data) {
+                data = JSON.parse(data);
+
+                alert(data['text']);
+
+                if (data['reload']) {
+                    window.location.href="";
+                }
+            }
+        );
     });
 
 });
@@ -211,8 +209,13 @@ $(function() {
 
 $(function() {
     var dateFormat = $("#js-date").attr('data-dateFormat');
-  
-    $("#js-date").text("2019");
+
+    $.post("engine/modules/scripts/datescript.php",
+        { format: dateFormat },
+        function(data) {
+            $("#js-date").text(data);
+        }
+    );
 });
 
 /* END--GetDate */
