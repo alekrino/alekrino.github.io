@@ -201,13 +201,17 @@
   left:15%;
 }
 
-/* .image__preview {
+.preview-block__right-mobile {
+  display:none;
+}
+
+.image__preview {
   width:90%;
 }
 
 .image__preview:hover {
   margin-top:0px;
-} */
+}
 
 /* ------------------------ */
 
@@ -337,6 +341,10 @@
 
 .image__problems {
   width:90%;
+}
+
+.image__problems:hover {
+  margin:0;
 }
 
 .problems__text {
