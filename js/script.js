@@ -196,7 +196,7 @@ $(function() {
         var siteType = $("#js-siteType").val();
         var orderData = [name, phone, email, userText, orderFrom, siteType];
 
-        $.post("http://localhost/fsmalcompany/www/engine/modules/orderform/get.php",
+        $.post("get.php",
             { orderData: orderData },
             function(data) {
                 data = JSON.parse(data);
@@ -219,7 +219,7 @@ $(function() {
 $(function() {
     var dateFormat = $("#js-date").attr('data-dateFormat');
 
-    $.post("http://localhost/fsmalcompany/www/engine/modules/scripts/datescript.php",
+    $.post("datescript.php",
         { format: dateFormat },
         function(data) {
             $("#js-date").text(data);
