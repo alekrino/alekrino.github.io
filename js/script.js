@@ -148,10 +148,10 @@ $(function() {
 
     var screenHeight = $("body").height();
     var headerHeight = $("header").height();
-    var footerHeight = $("footer").height();
+    var footerHeight = $(".container__form").height() + $("footer").height();
 
     $(window).scroll(function() {
-        if ($(this).scrollTop() < ((screenHeight - footerHeight) - 500) && $(this).scrollTop() > headerHeight) {
+        if ($(this).scrollTop() < (screenHeight - footerHeight) && $(this).scrollTop() > headerHeight) {
             $(".mobile-menu").css("position", "fixed");
         } else {
             $(".mobile-menu").css("position", "relative");
@@ -176,6 +176,14 @@ $(function() {
 /* Form-submit */
 
 $(function() {
+    $(".add-to-cart").on('click', function() {
+        let siteType = $(this).attr('site-type');
+
+        $("#js-siteType").val(siteType);
+    });
+});
+
+$(function() {
 
     $("#js-form").on('submit', function(e) {
         e.preventDefault();
@@ -185,9 +193,21 @@ $(function() {
         var email = $("input[name='email']").val();
         var userText = $("textarea[name='user-text']").val();
         var orderFrom = $("input[name='order-from']").val();
-        var orderData = [name, phone, email, userText, orderFrom];
+        var siteType = $("#js-siteType").val();
+        var orderData = [name, phone, email, userText, orderFrom, siteType];
 
-        alert("Спасибо за заказ!");
+        $.post("http://localhost/fsmalcompany/www/engine/modules/orderform/get.php",
+            { orderData: orderData },
+            function(data) {
+                data = JSON.parse(data);
+
+                alert(data['text']);
+
+                if (data['reload']) {
+                    window.location.href="";
+                }
+            }
+        );
     });
 
 });
@@ -199,7 +219,12 @@ $(function() {
 $(function() {
     var dateFormat = $("#js-date").attr('data-dateFormat');
 
-        $("#js-date").text("2019");
+    $.post("http://localhost/fsmalcompany/www/engine/modules/scripts/datescript.php",
+        { format: dateFormat },
+        function(data) {
+            $("#js-date").text(data);
+        }
+    );
 });
 
 /* END--GetDate */
