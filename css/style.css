@@ -14,6 +14,10 @@
   font-family:'Yanone Kaffeesatz', sans-serif;
 }
 
+.family-Garamond {
+  font-family:'EB Garamond', serif;
+}
+
 .input {
   border:1px solid var(--main-gray);
   padding:15px 10px !important;
@@ -542,6 +546,8 @@
 
 .tab__image-block {
   flex-grow:5;
+  display:flex;
+  justify-content:center;
 }
 
 .tab__image {
