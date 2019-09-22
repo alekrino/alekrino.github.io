@@ -196,7 +196,7 @@ $(function() {
         var siteType = $("#js-siteType").val();
         var orderData = [name, phone, email, userText, orderFrom, siteType];
 
-        $.post("get.php",
+        $.post("http://localhost/fsmalcompany/www/engine/modules/orderform/get.php",
             { orderData: orderData },
             function(data) {
                 data = JSON.parse(data);
@@ -219,7 +219,7 @@ $(function() {
 $(function() {
     var dateFormat = $("#js-date").attr('data-dateFormat');
 
-    $.post("datescript.php",
+    $.post("http://localhost/fsmalcompany/www/engine/modules/scripts/datescript.php",
         { format: dateFormat },
         function(data) {
             $("#js-date").text(data);
@@ -228,3 +228,13 @@ $(function() {
 });
 
 /* END--GetDate */
+
+/* WOW-JS */
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    console.log('no WOW');
+} else {
+    new WOW().init();
+}
+
+/* END--WOW-JS */
