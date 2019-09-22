@@ -196,18 +196,7 @@ $(function() {
         var siteType = $("#js-siteType").val();
         var orderData = [name, phone, email, userText, orderFrom, siteType];
 
-        $.post("http://localhost/fsmalcompany/www/engine/modules/orderform/get.php",
-            { orderData: orderData },
-            function(data) {
-                data = JSON.parse(data);
-
-                alert(data['text']);
-
-                if (data['reload']) {
-                    window.location.href="";
-                }
-            }
-        );
+        
     });
 
 });
@@ -219,12 +208,7 @@ $(function() {
 $(function() {
     var dateFormat = $("#js-date").attr('data-dateFormat');
 
-    $.post("http://localhost/fsmalcompany/www/engine/modules/scripts/datescript.php",
-        { format: dateFormat },
-        function(data) {
-            $("#js-date").text(data);
-        }
-    );
+            $("#js-date").text('2019');
 });
 
 /* END--GetDate */
