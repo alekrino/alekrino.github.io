@@ -11,7 +11,9 @@
   .container__prices,
   .container__work-process,
   .container__form,
-  .container__portfolio {
+  .container__portfolio,
+  .partners,
+  .portfolio {
     padding:5% 20%;
   }
 
@@ -35,7 +37,8 @@
   .caption__steps::before,
   .caption__prices::before,
   .portfolio__caption::before,
-  .caption__contact::before {
+  .caption__contact::before,
+  .partners__caption::before {
     top:60px;
   }
 }
@@ -97,6 +100,11 @@
     flex-flow:column;
   }
 
+  .problems__image {
+    display:flex;
+    justify-content:center;
+  }
+
   .problems__text {
     padding:0;
   }
@@ -115,6 +123,15 @@
     flex-grow:10;
     padding-left:0%;
     width:100%;
+  }
+
+  .tab__image-block {
+    justify-content:center;
+  }
+
+  .tab__image {
+    width:250px;
+    height:250px;
   }
 
   .prices {
@@ -156,6 +173,17 @@
 
   .go-top {
     display:none !important;
+  }
+
+  .portfolio__imgs, .portfolio__imgs a {
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+  }
+
+  .portfolio__imgs img {
+    width:200px;
+    height:316px;
   }
 }
 

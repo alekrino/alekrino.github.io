@@ -55,6 +55,84 @@
 
 /* Services -> Sites */
 
+/* Services -> Other */
+
+.partner-mg {
+  display:flex;
+  flex-direction:column;
+}
+
+.partner-mg__caption {
+  text-align:right;
+  font-weight:bold;
+  font-size:1.4em;
+}
+
+.partner-mg__image {
+  display:flex;
+  width:100%;
+  justify-content:flex-end;
+}
+
+.image__partner-mg {
+  width:auto;
+}
+
+.image__partner-mg:hover{
+  margin-top:0px;
+}
+
+/* Services -> Other */
+
+/* Contacts */
+
+.partners {
+  display:flex;
+  flex-direction:column;
+  padding:5% 10%;
+}
+
+.partners__caption::before {
+  position:absolute;
+  top:40px;
+  left:50%;
+  transform:translate(-50%,0%);
+  content:'Партнеры';
+  width:auto;
+  height:auto;
+  font-size:0.6em;
+  color:var(--main-blue);
+}
+
+.partners__caption::after {
+  position:relative;
+  margin-left:50%;
+  margin-top:15px;
+  transform:translate(-50%,0%);
+  content:'';
+  width:12%;
+  height:2px;
+  background:var(--main-blue);
+  display:flex;
+}
+
+.partners__logos {
+  display:flex;
+  width:100%;
+  justify-content:space-around;
+  margin-top:30px;
+}
+
+.image__partners {
+  width:auto;
+}
+
+.image__partners:hover {
+  margin-top:0px;
+}
+
+/* Contacts */
+
 /* Privacy-styles */
 
 .privacy__block {
@@ -88,3 +166,30 @@
 }
 
 /* END--Privacy-styles */
+
+/* Portfolio */
+
+.portfolio {
+  display:flex;
+  flex-direction:column;
+  padding:5% 10%;
+}
+
+.portfolio__all {
+  display:flex;
+  margin-top:30px;
+  justify-content:space-around;
+  flex-direction:column;
+}
+
+.portfolio__imgs {
+  display:flex;
+  justify-content:space-around;
+}
+
+.portfolio__imgs img {
+  width:300px;
+  height:416px;
+}
+
+/* END--Portfolio */
